@@ -3,7 +3,7 @@
 Get the latest version of the Sweet Tooth PHP library with:
 
 ```
-git clone https://github.com/sweettoothhq/sweettooth-php
+git clone https://github.com/sweettooth/sweettooth-php
 ```
 
 To get started, add the following to your PHP script:
