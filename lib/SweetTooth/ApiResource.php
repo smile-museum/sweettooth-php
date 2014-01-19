@@ -32,10 +32,21 @@ abstract class SweetTooth_ApiResource extends SweetTooth_Object
     return $name;
   }
 
-  public static function classUrl($class)
+  /**
+   * Override this function for irregular plural
+   * names. Eg. Activities
+   * Default functionality is to append an 's'
+   */
+  public static function classNamePlural($class)
   {
     $base = self::_scopedLsb($class, 'className', $class);
-    return "/v1/${base}s";
+    return "${base}s";
+  }
+
+  public static function classUrl($class)
+  {
+    $base = self::_scopedLsb($class, 'classNamePlural', $class);
+    return "/v1/${base}";
   }
 
   public function instanceUrl()

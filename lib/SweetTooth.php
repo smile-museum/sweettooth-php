@@ -36,6 +36,7 @@ require(dirname(__FILE__) . '/SweetTooth/AttachedObject.php');
 require(dirname(__FILE__) . '/SweetTooth/Collection.php');
 
 // Sweet Tooth API Resources
+require(dirname(__FILE__) . '/SweetTooth/Activity.php');
 require(dirname(__FILE__) . '/SweetTooth/Customer.php');
 require(dirname(__FILE__) . '/SweetTooth/Event.php');
 require(dirname(__FILE__) . '/SweetTooth/RedemptionOption.php');

@@ -28,3 +28,7 @@ echo $customer;
 # Documentation
 
 Please see https://www.sweettoothrewards.com/api for up-to-date documentation.
+
+# Acknowledgements
+
+Inspired by Stripe PHP
