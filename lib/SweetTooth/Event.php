@@ -1,7 +1,9 @@
 <?php
 
 /**
- * Notice: This resource is deprecated and will eventually be
+ * @deprecated Use Activity
+ * 
+ * This resource is deprecated and has been
  * replaced by SweetTooth_Activity. Please use the Activity
  * class, and port any use of this Event class over to Activity.
  * The Event object will be removed completely in version 1.0.0.

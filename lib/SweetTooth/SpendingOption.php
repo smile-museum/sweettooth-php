@@ -1,10 +1,12 @@
 <?php
 
-/**
- * @deprecated Use Spending
- */
-class SweetTooth_Redemption extends SweetTooth_ApiResource
+class SweetTooth_SpendingOption extends SweetTooth_ApiResource
 {
+  public static function className($class)
+  {
+    return 'spending_option';
+  }
+
   public static function constructFrom($values, $apiKey=null)
   {
     $class = get_class();
@@ -17,9 +19,9 @@ class SweetTooth_Redemption extends SweetTooth_ApiResource
     return self::_scopedRetrieve($class, $id, $apiKey);
   }
 
-  public static function create($params=null, $apiKey=null)
+  public static function all($params=null, $apiKey=null)
   {
     $class = get_class();
-    return self::_scopedCreate($class, $params, $apiKey);
+    return self::_scopedAll($class, $params, $apiKey);
   }
 }

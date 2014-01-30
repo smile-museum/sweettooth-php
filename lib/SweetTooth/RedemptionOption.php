@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated Use SpendingOption
+ */
 class SweetTooth_RedemptionOption extends SweetTooth_ApiResource
 {
   public static function className($class)

@@ -1,9 +1,6 @@
 <?php
 
-/**
- * @deprecated Use Spending
- */
-class SweetTooth_Redemption extends SweetTooth_ApiResource
+class SweetTooth_Spending extends SweetTooth_ApiResource
 {
   public static function constructFrom($values, $apiKey=null)
   {

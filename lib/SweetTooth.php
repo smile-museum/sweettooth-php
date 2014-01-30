@@ -38,6 +38,10 @@ require(dirname(__FILE__) . '/SweetTooth/Collection.php');
 // Sweet Tooth API Resources
 require(dirname(__FILE__) . '/SweetTooth/Activity.php');
 require(dirname(__FILE__) . '/SweetTooth/Customer.php');
+require(dirname(__FILE__) . '/SweetTooth/Spending.php');
+require(dirname(__FILE__) . '/SweetTooth/SpendingOption.php');
+
+// Deprecated Resources
 require(dirname(__FILE__) . '/SweetTooth/Event.php');
 require(dirname(__FILE__) . '/SweetTooth/RedemptionOption.php');
 require(dirname(__FILE__) . '/SweetTooth/Redemption.php');

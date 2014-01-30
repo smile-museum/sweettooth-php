@@ -40,7 +40,12 @@ abstract class SweetTooth_Util
   {
     $types = array(
       'customer' => 'SweetTooth_Customer',
+      'activity' => 'SweetTooth_Activity',
+      'spending_option' => 'SweetTooth_SpendingOption',
+      'spending' => 'SweetTooth_Spending',
       'collection' => 'SweetTooth_Collection',
+
+      // Deprecated
       'event' => 'SweetTooth_Event',
       'redemption_option' => 'SweetTooth_RedemptionOption',
       'redemption' => 'SweetTooth_Redemption',
