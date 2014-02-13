@@ -24,4 +24,13 @@ class SweetTooth_Activity extends SweetTooth_ApiResource
     $class = get_class();
     return self::_scopedCreate($class, $params, $apiKey);
   }
+
+  public function cancel($params=null)
+  {
+    $requestor = new SweetTooth_ApiRequestor($this->_apiKey);
+    $url = $this->instanceUrl() . '/cancel';
+    list($response, $apiKey) = $requestor->request('post', $url, $params);
+    $this->refreshFrom($response, $apiKey);
+    return $this;
+  }
 }
