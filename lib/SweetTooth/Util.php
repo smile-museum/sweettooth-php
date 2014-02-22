@@ -43,6 +43,7 @@ abstract class SweetTooth_Util
       'activity' => 'SweetTooth_Activity',
       'spending_option' => 'SweetTooth_SpendingOption',
       'spending' => 'SweetTooth_Spending',
+      'points_transaction' => 'SweetTooth_PointsTransaction',
       'collection' => 'SweetTooth_Collection',
 
       // Deprecated
