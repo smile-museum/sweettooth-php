@@ -26,6 +26,7 @@ require(dirname(__FILE__) . '/SweetTooth/ApiError.php');
 require(dirname(__FILE__) . '/SweetTooth/ApiConnectionError.php');
 require(dirname(__FILE__) . '/SweetTooth/AuthenticationError.php');
 require(dirname(__FILE__) . '/SweetTooth/InvalidRequestError.php');
+require(dirname(__FILE__) . '/SweetTooth/RecordExistsError.php');
 
 // Plumbing
 require(dirname(__FILE__) . '/SweetTooth/Object.php');

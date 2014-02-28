@@ -82,6 +82,11 @@ class SweetTooth_ApiRequestor
     $error = $resp;
     switch ($rcode) {
     case 400:
+      if (isset($error['code']) && $error['code'] == 'record_exists') {
+        $message = isset($error['message']) ? $error['message'] : null;
+        $param = isset($error['param']) ? $error['param'] : null;
+        throw new SweetTooth_RecordExistsError($message, $param, $rcode, $rbody, $resp);
+      }
     case 404:
       throw new SweetTooth_InvalidRequestError(isset($error['message']) ? $error['message'] : null,
                                            isset($error['param']) ? $error['param'] : null,
