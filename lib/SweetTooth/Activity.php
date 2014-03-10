@@ -25,6 +25,12 @@ class SweetTooth_Activity extends SweetTooth_ApiResource
     return self::_scopedCreate($class, $params, $apiKey);
   }
 
+  public function save()
+  {
+    $class = get_class();
+    return self::_scopedSave($class);
+  }
+
   public function cancel($params=null)
   {
     $requestor = new SweetTooth_ApiRequestor($this->_apiKey);
