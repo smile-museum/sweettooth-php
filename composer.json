@@ -1,0 +1,29 @@
+{
+  "name": "sweettooth/sweettooth-php",
+  "description": "Sweet Tooth PHP Library",
+  "keywords": [
+    "sweettooth",
+    "customer loyalty",
+    "points"
+  ],
+  "homepage": "https://www.sweettoothrewards.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sweet Tooth and contributors",
+      "homepage": "https://github.com/sweettooth/sweettooth-php/contributors"
+    }
+  ],
+  "require": {
+    "php": ">=5.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "vierbergenlars/simpletest": "*"
+  },
+  "autoload": {
+    "classmap": ["lib/SweetTooth/"]
+  }
+}
