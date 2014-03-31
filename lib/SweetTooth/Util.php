@@ -39,17 +39,18 @@ abstract class SweetTooth_Util
   public static function convertToSweetToothObject($resp, $apiKey)
   {
     $types = array(
-      'customer' => 'SweetTooth_Customer',
-      'activity' => 'SweetTooth_Activity',
-      'spending_option' => 'SweetTooth_SpendingOption',
-      'spending' => 'SweetTooth_Spending',
-      'points_transaction' => 'SweetTooth_PointsTransaction',
-      'collection' => 'SweetTooth_Collection',
+      'customer'            => 'SweetTooth_Customer',
+      'activity'            => 'SweetTooth_Activity',
+      'spending_option'     => 'SweetTooth_SpendingOption',
+      'spending'            => 'SweetTooth_Spending',
+      'points_transaction'  => 'SweetTooth_PointsTransaction',
+      'channel_environment' => 'SweetTooth_ChannelEnvironment',
+      'collection'          => 'SweetTooth_Collection',
 
       // Deprecated
-      'event' => 'SweetTooth_Event',
+      'event'             => 'SweetTooth_Event',
       'redemption_option' => 'SweetTooth_RedemptionOption',
-      'redemption' => 'SweetTooth_Redemption',
+      'redemption'        => 'SweetTooth_Redemption',
     );
     if (self::isCollection($resp)) {
       $mapped = array();

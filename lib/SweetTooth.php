@@ -42,6 +42,7 @@ require(dirname(__FILE__) . '/SweetTooth/Customer.php');
 require(dirname(__FILE__) . '/SweetTooth/Spending.php');
 require(dirname(__FILE__) . '/SweetTooth/SpendingOption.php');
 require(dirname(__FILE__) . '/SweetTooth/PointsTransaction.php');
+require(dirname(__FILE__) . '/SweetTooth/ChannelEnvironment.php');
 
 // Deprecated Resources
 require(dirname(__FILE__) . '/SweetTooth/Event.php');
