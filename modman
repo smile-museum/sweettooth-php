@@ -1,1 +1,4 @@
-lib                                        lib/sweettooth-php/lib
+lib                                             lib/sweettooth-php/lib
+VERSION                                         lib/sweettooth-php/VERSION
+VERSION                                         lib/sweettooth-php/VERSION
+README.md                                       lib/sweettooth-php/README.md
