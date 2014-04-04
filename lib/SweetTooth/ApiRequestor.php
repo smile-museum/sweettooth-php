@@ -205,18 +205,21 @@ class SweetTooth_ApiRequestor
   public function handleCurlError($errno, $message)
   {
     $apiBase = SweetTooth::$apiBase;
+    $serviceStatusLink  = "<a href=\"https://twitter.com/sweettoothapi\" target=\"_blank\">Twitter</a>";
+    $contactSupportLink = "<a href=\"mailto:support@sweettoothhq.com?subject:Sweet%20Tooth%20Api%20Problems\">support@sweettoothhq.com</a>";
+
     switch ($errno) {
-    case CURLE_COULDNT_CONNECT:
-    case CURLE_COULDNT_RESOLVE_HOST:
-    case CURLE_OPERATION_TIMEOUTED:
-      $msg = "Could not connect to SweetTooth ($apiBase).  Please check your internet connection and try again.  If this problem persists, you should check SweetTooth's service status at https://twitter.com/sweettoothstatus, or let us know at support@sweettoothhq.com.";
-      break;
-    case CURLE_SSL_CACERT:
-    case CURLE_SSL_PEER_CERTIFICATE:
-      $msg = "Could not verify SweetTooth's SSL certificate.  Please make sure that your network is not intercepting certificates.  (Try going to $apiBase in your browser.)  If this problem persists, let us know at support@sweettoothhq.com.";
-      break;
-    default:
-      $msg = "Unexpected error communicating with SweetTooth.  If this problem persists, let us know at support@sweettoothhq.com.";
+      case CURLE_COULDNT_CONNECT:
+      case CURLE_COULDNT_RESOLVE_HOST:
+      case CURLE_OPERATION_TIMEOUTED:
+        $msg = "Could not connect to SweetTooth ($apiBase).  Please check your internet connection and try again.  If this problem persists, you should check SweetTooth's service status on {$serviceStatusLink}, or let us know at {$contactSupportLink}.";
+        break;
+      case CURLE_SSL_CACERT:
+      case CURLE_SSL_PEER_CERTIFICATE:
+        $msg = "Could not verify SweetTooth's SSL certificate.  Please make sure that your network is not intercepting certificates.  (Try going to $apiBase in your browser.)  If this problem persists, let us know at support@sweettoothhq.com.";
+        break;
+      default:
+        $msg = "Unexpected error communicating with SweetTooth.  If this problem persists, let us know at support@sweettoothhq.com.";
     }
 
     $msg .= "\n\n(Network error [errno $errno]: $message)";
