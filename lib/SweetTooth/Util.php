@@ -45,6 +45,7 @@ abstract class SweetTooth_Util
       'spending'            => 'SweetTooth_Spending',
       'points_transaction'  => 'SweetTooth_PointsTransaction',
       'channel_environment' => 'SweetTooth_ChannelEnvironment',
+      'ping'                => 'SweetTooth_Ping',
       'collection'          => 'SweetTooth_Collection',
 
       // Deprecated
