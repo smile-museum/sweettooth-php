@@ -88,10 +88,10 @@ abstract class SweetTooth_ApiResource extends SweetTooth_Object
     return SweetTooth_Util::convertToSweetToothObject($response, $apiKey);
   }
 
-  protected function _scopedSave($class)
+  protected function _scopedSave($class, $apiKey=null)
   {
-    self::_validateCall('save');
-    $requestor = new SweetTooth_ApiRequestor($this->_apiKey);
+    self::_validateCall('save', null, $apiKey);
+    $requestor = new SweetTooth_ApiRequestor($apiKey);
     $params = $this->serializeParameters();
 
     if (count($params) > 0) {
@@ -102,10 +102,10 @@ abstract class SweetTooth_ApiResource extends SweetTooth_Object
     return $this;
   }
 
-  protected function _scopedDelete($class, $params=null)
+  protected function _scopedDelete($class, $params=null, $apiKey=null)
   {
-    self::_validateCall('delete');
-    $requestor = new SweetTooth_ApiRequestor($this->_apiKey);
+    self::_validateCall('delete', null, $apiKey);
+    $requestor = new SweetTooth_ApiRequestor($apiKey);
     $url = $this->instanceUrl();
     list($response, $apiKey) = $requestor->request('delete', $url, $params);
     $this->refreshFrom($response, $apiKey);

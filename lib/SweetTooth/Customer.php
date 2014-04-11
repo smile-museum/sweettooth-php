@@ -26,13 +26,13 @@ class SweetTooth_Customer extends SweetTooth_ApiResource
     return self::_scopedCreate($class, $params, $apiKey);
   }
 
-  public function save()
+  public function save($apiKey=null)
   {
     $class = get_class();
-    return self::_scopedSave($class);
+    return self::_scopedSave($class, $apiKey);
   }
 
-  public function delete($params=null)
+  public function delete($params=null, $apiKey=null)
   {
     $class = get_class();
     return self::_scopedDelete($class, $params);

@@ -20,9 +20,9 @@ class SweetTooth_Spending extends SweetTooth_ApiResource
     return self::_scopedCreate($class, $params, $apiKey);
   }
 
-  public function cancel($params=null)
+  public function cancel($params=null, $apiKey=null)
   {
-    $requestor = new SweetTooth_ApiRequestor($this->_apiKey);
+    $requestor = new SweetTooth_ApiRequestor($apiKey);
     $url = $this->instanceUrl() . '/cancel';
     list($response, $apiKey) = $requestor->request('post', $url, $params);
     $this->refreshFrom($response, $apiKey);
