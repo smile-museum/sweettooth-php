@@ -1,13 +1,10 @@
 <?php
 
-/**
- * @deprecated  see PointsProduct
- */
-class SweetTooth_SpendingOption extends SweetTooth_ApiResource
+class SweetTooth_PointsProduct extends SweetTooth_ApiResource
 {
   public static function className($class)
   {
-    return 'spending_option';
+    return 'points_product';
   }
 
   public static function constructFrom($values, $apiKey=null)
