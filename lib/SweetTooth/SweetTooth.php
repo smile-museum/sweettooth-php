@@ -6,7 +6,7 @@ abstract class SweetTooth
   public static $apiBase = 'https://api.sweettooth.io';
   public static $apiVersion = null;
   public static $verifySslCerts = true;
-  const VERSION = '0.9.4';
+  const VERSION = '0.9.5';
 
   public static function getApiKey()
   {
