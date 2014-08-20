@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated  see PointsPurchase
+ */
 class SweetTooth_Spending extends SweetTooth_ApiResource
 {
   public static function constructFrom($values, $apiKey=null)
